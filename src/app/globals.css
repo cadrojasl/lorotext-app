@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --blue: #1B4D9E;
+  --red: #E1382B;
+  --green: #3FAE49;
+  --gold: #F2A900;
+  --black: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1A1A1A;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
