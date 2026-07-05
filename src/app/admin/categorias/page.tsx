@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Eye, EyeOff, Loader2, Plus, Edit, Trash, X, Check, Upload } from "lucide-react";
+import { Eye, EyeOff, Loader2, Plus, Edit, Trash, X, Check, Upload, Tag } from "lucide-react";
 import { AdminHeader, AdminTabs } from "@/components/AdminNav";
 import { BRAND } from "@/lib/constants";
 import { supabase } from "@/lib/supabase";
