@@ -67,7 +67,7 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 flex items-center" style={{ minHeight: "68vh" }}>
           <div className="text-white max-w-xl py-20">
             <p className="text-xs uppercase tracking-[0.25em] mb-4 font-medium" style={{ color: BRAND.GOLD }}>
-              Nueva colección · 2025
+              Nueva colección · {new Date().getFullYear()}
             </p>
             <h1 className="font-bold leading-tight mb-5" style={{ fontSize: "clamp(2.2rem,5.5vw,3.8rem)", fontFamily: "'Playfair Display', serif" }}>
               El placer<br />de tu hogar

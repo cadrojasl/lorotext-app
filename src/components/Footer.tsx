@@ -83,9 +83,6 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
               ].map(({ label, href }) => (
                 <li key={label}><Link href={href} className="hover:text-white transition-colors">{label}</Link></li>
               ))}
-              <li>
-                <Link href="/admin/login" className="hover:text-white transition-colors text-blue-300/70">Administrador</Link>
-              </li>
             </ul>
           </div>
         </div>
