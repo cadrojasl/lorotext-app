@@ -80,7 +80,6 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
               {[
                 { label: "¿Cómo comprar?", href: "/info/como-comprar" },
                 { label: "Envíos y tiempos", href: "/info/envios" },
-                { label: "Política de cambios", href: "/info/cambios" },
               ].map(({ label, href }) => (
                 <li key={label}><Link href={href} className="hover:text-white transition-colors">{label}</Link></li>
               ))}
