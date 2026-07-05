@@ -11,7 +11,7 @@ import type { Category, Product } from "@/types";
 async function getData() {
   try {
     const supabase = await createSupabaseServerClient();
-    const [{ data: categories }, { data: products }, { data: catImages }] = await Promise.all([
+    const [{ data: categories }, { data: products }, { data: catImages }, { data: surveys }] = await Promise.all([
       supabase.from("categories").select("*").eq("visible", true).order("sort_order"),
       supabase
         .from("products")
@@ -20,16 +20,15 @@ async function getData() {
         .eq("featured", true)
         .order("created_at", { ascending: false })
         .limit(8),
-      // Trae la primera imagen de cada categoría para usarla como portada
       supabase
         .from("products")
         .select("category_id, images:product_images(url, sort_order)")
         .eq("active", true)
         .not("images", "is", null)
         .order("created_at", { ascending: false }),
+      supabase.from("survey_responses").select("rating"),
     ]);
 
-    // Construye un mapa category_id → primera URL de imagen
     const catImageMap: Record<string, string> = {};
     for (const p of (catImages ?? [])) {
       if (!catImageMap[p.category_id]) {
@@ -39,14 +38,20 @@ async function getData() {
       }
     }
 
-    return { categories: categories ?? [], products: products ?? [], catImageMap };
+    const surveyList = surveys ?? [];
+    const surveyCount = surveyList.length;
+    const surveyAvg = surveyCount
+      ? (surveyList.reduce((s: number, r: { rating: number }) => s + r.rating, 0) / surveyCount).toFixed(1)
+      : null;
+
+    return { categories: categories ?? [], products: products ?? [], catImageMap, surveyCount, surveyAvg };
   } catch {
-    return { categories: [], products: [], catImageMap: {} };
+    return { categories: [], products: [], catImageMap: {}, surveyCount: 0, surveyAvg: null };
   }
 }
 
 export default async function HomePage() {
-  const [{ categories, products, catImageMap }, config] = await Promise.all([getData(), getSiteConfig()]);
+  const [{ categories, products, catImageMap, surveyCount, surveyAvg }, config] = await Promise.all([getData(), getSiteConfig()]);
   const waNumber = config.whatsapp_number;
 
   return (
@@ -89,8 +94,13 @@ export default async function HomePage() {
       {/* ── Stats strip ── */}
       <div className="text-white py-5" style={{ backgroundColor: "#163E80" }}>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {[["+ 5.000","Clientes felices"],["100%","Algodón premium"],["4.8 ★","Calificación media"],["24 h","Respuesta WhatsApp"]].map(([n, label]) => (
-            <div key={label}>
+          {[
+            [surveyCount > 0 ? `+ ${surveyCount.toLocaleString("es-CO")}` : "+ 0", "Clientes calificaron"],
+            ["100%", "Algodón premium"],
+            [surveyAvg ? `${surveyAvg} ★` : "— ★", "Calificación media"],
+            ["24 h", "Respuesta WhatsApp"],
+          ].map(([n, label]) => (
+            <div key={label as string}>
               <div className="font-black text-xl" style={{ color: BRAND.GOLD }}>{n}</div>
               <div className="text-xs text-blue-300 mt-0.5">{label}</div>
             </div>
