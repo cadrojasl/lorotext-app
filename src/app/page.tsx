@@ -63,10 +63,10 @@ export default async function HomePage() {
           alt="Dormitorio elegante con ropa de cama Lorotext SYM"
           fill priority className="object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(27,77,158,0.88) 0%, rgba(27,77,158,0.55) 55%, rgba(27,77,158,0.1) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(0,128,115,0.90) 0%, rgba(0,150,136,0.60) 55%, rgba(0,150,136,0.10) 100%)" }} />
         <div className="relative max-w-7xl mx-auto px-4 flex items-center" style={{ minHeight: "68vh" }}>
           <div className="text-white max-w-xl py-20">
-            <p className="text-xs uppercase tracking-[0.25em] mb-4 font-medium" style={{ color: BRAND.GOLD }}>
+            <p className="text-xs uppercase tracking-[0.25em] mb-4 font-bold" style={{ color: BRAND.RED }}>
               Nueva colección · {new Date().getFullYear()}
             </p>
             <h1 className="font-bold leading-tight mb-5" style={{ fontSize: "clamp(2.2rem,5.5vw,3.8rem)", fontFamily: "'Playfair Display', serif" }}>
