@@ -38,7 +38,7 @@ export default function ComoComprarPage() {
       <div className="bg-blue-50 rounded-2xl p-6 mb-8">
         <h2 className="font-bold text-gray-900 mb-3">Métodos de pago aceptados</h2>
         <ul className="space-y-2 text-sm text-gray-600">
-          {["Transferencia bancaria (Nequi, Daviplata, PSE)", "Tarjeta de crédito o débito", "Pago contra entrega (ciudad de Medellín)", "Efectivo en punto de venta"].map((m) => (
+          {["Transferencia bancaria (Nequi, Daviplata, PSE)", "Tarjeta de crédito o débito", "Pago contra entrega (Bogotá y Soacha)", "Efectivo en punto de venta"].map((m) => (
             <li key={m} className="flex items-center gap-2"><Check size={14} style={{ color: BRAND.GREEN }} /> {m}</li>
           ))}
         </ul>
