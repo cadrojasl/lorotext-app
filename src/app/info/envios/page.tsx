@@ -49,6 +49,7 @@ export default function EnviosPage() {
               <li>• Contra entrega (pago al recibir)</li>
               <li>• Pago anticipado por transferencia</li>
               <li>• Nequi · Daviplata · PSE</li>
+              <li>• Tarjeta de crédito o débito</li>
             </ul>
           </div>
         </div>
