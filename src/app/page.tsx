@@ -227,7 +227,7 @@ export default async function HomePage() {
           </h2>
           <p className="text-blue-200 mb-8 text-sm leading-relaxed">
             Nuestro equipo está disponible de lunes a sábado por WhatsApp.<br />
-            Te ayudamos a elegir la ropa de cama perfecta para tu hogar.
+            Renueva tu hogar con LOROTEXT SYM, donde la calidad y el buen servicio hacen la diferencia.
           </p>
           <a
             href={`https://wa.me/${waNumber}?text=${encodeURIComponent("¡Hola! Necesito asesoría para elegir ropa de cama Lorotext SYM.")}`}
