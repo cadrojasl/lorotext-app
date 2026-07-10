@@ -87,7 +87,7 @@ export default async function HomePage() {
               El placer<br />de tu hogar
             </h1>
             <p className="text-base mb-8 max-w-md leading-relaxed mx-auto md:mx-0" style={{ color: "rgba(255,255,255,0.82)" }}>
-              Sábanas, cobijas y almohadas premium para noches de descanso que mereces.
+              Todo lo que tu hogar necesita, en un solo lugar.<br />Cubrelechos, sábanas, cobijas, y mucho más, con calidad 100 % garantizada.
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               <Link
