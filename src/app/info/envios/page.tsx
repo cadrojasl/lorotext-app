@@ -32,9 +32,9 @@ export default function EnviosPage() {
             <Clock size={18} style={{ color: BRAND.BLUE }} />
           </div>
           <div>
-            <h3 className="font-bold text-sm text-gray-900 mb-1">1 día hábil</h3>
+            <h3 className="font-bold text-sm text-gray-900 mb-1">Entrega el mismo día</h3>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Confirmado el pedido, la entrega se realiza al siguiente día hábil.
+              Una vez confirmado el pedido, la entrega se realiza el mismo día.
             </p>
           </div>
         </div>
@@ -81,12 +81,12 @@ export default function EnviosPage() {
               <tr>
                 <td className="py-3 pr-4 font-medium text-gray-700">Bogotá</td>
                 <td className="py-3 text-gray-500">$15.000 – $20.000</td>
-                <td className="py-3 text-gray-500">1 día hábil</td>
+                <td className="py-3 text-gray-500">Mismo día</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-gray-700">Soacha</td>
                 <td className="py-3 text-gray-500">$15.000 – $20.000</td>
-                <td className="py-3 text-gray-500">1 día hábil</td>
+                <td className="py-3 text-gray-500">Mismo día</td>
               </tr>
               <tr>
                 <td className="py-3 pr-4 font-medium text-gray-700">Otras ciudades</td>
