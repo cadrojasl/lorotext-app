@@ -15,7 +15,7 @@ function IgIcon({ size = 16 }: { size?: number }) {
 const CATS = ["Sábanas", "Cobijas", "Almohadas", "Ropa de Cama"];
 
 export default function Footer({ config }: { config: SiteConfigValues }) {
-  const { whatsapp_number, instagram_url, tiktok_url } = config;
+  const { whatsapp_number, instagram_url, tiktok_url, footer_description, business_hours } = config;
 
   return (
     <footer className="text-white pt-12 pb-6" style={{ backgroundColor: "#0D5C5C" }}>
@@ -30,7 +30,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
               <span className="font-bold text-sm" style={{ fontFamily: "'Playfair Display', serif" }}>LOROTEXT SYM</span>
             </div>
             <p className="text-sm mb-5 leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
-              El placer de tu hogar. Ropa de cama premium para noches de descanso incomparables.
+              {footer_description}
             </p>
             <div className="flex gap-2.5">
               <a href={instagram_url} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors">
@@ -69,7 +69,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
                 <IgIcon size={13} />
                 <a href={instagram_url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
               </li>
-              <li className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>Lun – Sáb · 8 am – 6 pm</li>
+              <li className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>{business_hours}</li>
             </ul>
           </div>
 

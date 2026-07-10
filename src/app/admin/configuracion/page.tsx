@@ -17,7 +17,7 @@ function IgIcon({ size = 13 }: { size?: number }) {
 
 export default function AdminConfiguracionPage() {
   const router = useRouter();
-  const [config, setConfig] = useState({ whatsapp_number: "", instagram_url: "", tiktok_url: "", promo_banner: "" });
+  const [config, setConfig] = useState({ whatsapp_number: "", instagram_url: "", tiktok_url: "", promo_banner: "", footer_description: "", business_hours: "" });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -32,6 +32,8 @@ export default function AdminConfiguracionPage() {
           instagram_url: map.instagram_url ?? "",
           tiktok_url: map.tiktok_url ?? "",
           promo_banner: map.promo_banner ?? "",
+          footer_description: map.footer_description ?? "",
+          business_hours: map.business_hours ?? "",
         });
       }
       setLoading(false);
@@ -89,6 +91,19 @@ export default function AdminConfiguracionPage() {
                 <label className="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">Banner promocional</label>
                 <input value={config.promo_banner} onChange={(e) => setConfig({ ...config, promo_banner: e.target.value })}
                   className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-blue-400" placeholder="¡Envío gratis en pedidos mayores a $200.000!" />
+              </div>
+              <div>
+                <label className="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">Descripción del footer</label>
+                <textarea value={config.footer_description} onChange={(e) => setConfig({ ...config, footer_description: e.target.value })}
+                  rows={3} className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-blue-400 resize-none"
+                  placeholder="El placer de tu hogar. Ropa de cama premium…" />
+                <p className="text-[10px] text-gray-400 mt-1">Texto que aparece bajo el logo en la parte inferior del sitio.</p>
+              </div>
+              <div>
+                <label className="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">Horario de atención</label>
+                <input value={config.business_hours} onChange={(e) => setConfig({ ...config, business_hours: e.target.value })}
+                  className="w-full border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-blue-400"
+                  placeholder="Lun – Sáb · 8 am – 6 pm" />
               </div>
               <button onClick={save} disabled={saving}
                 className="w-full py-3.5 rounded-xl text-white font-bold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-60"

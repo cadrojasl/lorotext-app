@@ -5,6 +5,8 @@ export interface SiteConfigValues {
   instagram_url: string;
   tiktok_url: string;
   promo_banner: string;
+  footer_description: string;
+  business_hours: string;
 }
 
 const DEFAULTS: SiteConfigValues = {
@@ -12,6 +14,8 @@ const DEFAULTS: SiteConfigValues = {
   instagram_url: "",
   tiktok_url: "",
   promo_banner: "",
+  footer_description: "El placer de tu hogar. Ropa de cama premium para noches de descanso incomparables.",
+  business_hours: "Lun – Sáb · 8 am – 6 pm",
 };
 
 export async function getSiteConfig(): Promise<SiteConfigValues> {
@@ -26,6 +30,8 @@ export async function getSiteConfig(): Promise<SiteConfigValues> {
       instagram_url: map.instagram_url || DEFAULTS.instagram_url,
       tiktok_url: map.tiktok_url || DEFAULTS.tiktok_url,
       promo_banner: map.promo_banner ?? "",
+      footer_description: map.footer_description || DEFAULTS.footer_description,
+      business_hours: map.business_hours || DEFAULTS.business_hours,
     };
   } catch {
     return DEFAULTS;
