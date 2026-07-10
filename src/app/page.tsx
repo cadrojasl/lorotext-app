@@ -226,7 +226,7 @@ export default async function HomePage() {
             ¿Necesitas asesoría personalizada?
           </h2>
           <p className="text-blue-200 mb-8 text-sm leading-relaxed">
-            Nuestro equipo está disponible de lunes a sábado por WhatsApp.<br />
+            Nuestro equipo está disponible de lunes a domingo por WhatsApp.<br />
             Renueva tu hogar con LOROTEXT SYM, donde la calidad y el buen servicio hacen la diferencia.
           </p>
           <a
