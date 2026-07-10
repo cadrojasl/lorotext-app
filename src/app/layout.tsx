@@ -11,6 +11,10 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Lorotext SYM — El placer de tu hogar",
   description: "Sábanas, cobijas y almohadas premium para noches de descanso incomparables.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
