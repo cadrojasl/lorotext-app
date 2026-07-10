@@ -57,42 +57,120 @@ export default async function HomePage() {
   return (
     <div>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden" style={{ minHeight: "68vh" }}>
-        <Image
-          src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1600&h=900&fit=crop&auto=format"
-          alt="Dormitorio elegante con ropa de cama Lorotext SYM"
-          fill priority className="object-cover"
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(0,128,115,0.90) 0%, rgba(0,150,136,0.60) 55%, rgba(0,150,136,0.10) 100%)" }} />
-        <div className="relative max-w-7xl mx-auto px-4 flex items-center" style={{ minHeight: "68vh" }}>
-          <div className="text-white max-w-xl py-20">
-            <p className="text-xs uppercase tracking-[0.25em] mb-4 font-bold" style={{ color: BRAND.RED }}>
+      <section
+        className="relative overflow-hidden"
+        style={{
+          minHeight: "72vh",
+          background: "linear-gradient(135deg, #0A3D3D 0%, #0D5C5C 40%, #1A8C8C 75%, #22A5A5 100%)",
+        }}
+      >
+        {/* Círculos decorativos de fondo */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute rounded-full opacity-10" style={{ width: 500, height: 500, background: BRAND.GOLD, top: -120, right: -60 }} />
+          <div className="absolute rounded-full opacity-10" style={{ width: 320, height: 320, background: BRAND.GREEN, bottom: -80, left: -60 }} />
+          <div className="absolute rounded-full opacity-5" style={{ width: 200, height: 200, background: BRAND.WHITE, top: "30%", left: "40%" }} />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8" style={{ minHeight: "72vh", paddingTop: "3rem", paddingBottom: "3rem" }}>
+          {/* Texto */}
+          <div className="text-white flex-1 text-center md:text-left order-2 md:order-1">
+            <span
+              className="inline-block text-xs uppercase tracking-[0.3em] font-black mb-5 px-3 py-1.5 rounded-full"
+              style={{ backgroundColor: BRAND.RED, color: "#fff", letterSpacing: "0.2em" }}
+            >
               Nueva colección · {new Date().getFullYear()}
-            </p>
-            <h1 className="font-bold leading-tight mb-5" style={{ fontSize: "clamp(2.2rem,5.5vw,3.8rem)", fontFamily: "'Playfair Display', serif" }}>
+            </span>
+            <h1
+              className="font-bold leading-tight mb-5"
+              style={{ fontSize: "clamp(2.4rem,5.5vw,4rem)", fontFamily: "'Playfair Display', serif", textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
+            >
               El placer<br />de tu hogar
             </h1>
-            <p className="text-lg text-blue-100 mb-8 max-w-md leading-relaxed">
+            <p className="text-base mb-8 max-w-md leading-relaxed mx-auto md:mx-0" style={{ color: "rgba(255,255,255,0.82)" }}>
               Sábanas, cobijas y almohadas premium para noches de descanso que mereces.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/catalogo" className="px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:brightness-110 shadow-md" style={{ backgroundColor: BRAND.GOLD, color: BRAND.BLACK }}>
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+              <Link
+                href="/catalogo"
+                className="px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:brightness-110 shadow-lg"
+                style={{ backgroundColor: BRAND.GOLD, color: BRAND.BLACK }}
+              >
                 Ver catálogo
               </Link>
               <a
                 href={`https://wa.me/${waNumber}?text=${encodeURIComponent("¡Hola! Necesito asesoría para elegir ropa de cama.")}`}
                 target="_blank" rel="noopener noreferrer"
-                className="px-7 py-3.5 rounded-xl font-bold text-sm border-2 border-white/70 text-white backdrop-blur-sm transition-all hover:bg-white/15"
+                className="px-7 py-3.5 rounded-xl font-bold text-sm border-2 border-white/60 text-white transition-all hover:bg-white/15"
               >
                 Hablar con asesor
               </a>
+            </div>
+          </div>
+
+          {/* Loro / mascota de marca */}
+          <div className="relative flex-shrink-0 flex items-center justify-center order-1 md:order-2" style={{ width: "clamp(240px,38vw,420px)", height: "clamp(240px,38vw,420px)" }}>
+            {/* Anillo exterior dorado */}
+            <div
+              className="relative rounded-full flex items-center justify-center"
+              style={{
+                width: "100%",
+                height: "100%",
+                background: `conic-gradient(${BRAND.GOLD} 0%, #FFC300 25%, ${BRAND.GOLD} 50%, #F2A900 75%, ${BRAND.GOLD} 100%)`,
+                padding: 6,
+                boxShadow: `0 0 60px rgba(242,169,0,0.45), 0 0 120px rgba(242,169,0,0.2)`,
+              }}
+            >
+              {/* Anillo verde interior */}
+              <div
+                className="rounded-full flex items-center justify-center"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  background: BRAND.GREEN,
+                  padding: 5,
+                }}
+              >
+                {/* Círculo imagen */}
+                <div
+                  className="rounded-full overflow-hidden relative"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(145deg, #e8f7f7 0%, #d0eeee 100%)",
+                  }}
+                >
+                  <Image
+                    src="/fondo.jpg"
+                    alt="Lorotext SYM — el placer de tu hogar"
+                    fill
+                    priority
+                    className="object-contain object-center"
+                    sizes="(max-width: 768px) 240px, 420px"
+                    style={{ transform: "scale(1.05)" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Badge marca flotante */}
+            <div
+              className="absolute rounded-2xl px-3 py-1.5 text-white text-xs font-bold shadow-lg"
+              style={{
+                backgroundColor: "#0A3D3D",
+                border: `1.5px solid ${BRAND.GOLD}`,
+                bottom: "10%",
+                right: "3%",
+                whiteSpace: "nowrap",
+              }}
+            >
+              ✨ Calidad premium
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Stats strip ── */}
-      <div className="text-white py-5" style={{ backgroundColor: "#163E80" }}>
+      <div className="text-white py-5" style={{ backgroundColor: "#0D5C5C" }}>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
             [surveyCount > 0 ? `+ ${surveyCount.toLocaleString("es-CO")}` : "+ 0", "Clientes calificaron"],
@@ -142,7 +220,7 @@ export default async function HomePage() {
       )}
 
       {/* ── CTA banner ── */}
-      <section className="py-16 text-center" style={{ backgroundColor: BRAND.BLUE }}>
+      <section className="py-16 text-center" style={{ backgroundColor: "#0D5C5C" }}>
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-white font-bold text-3xl mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
             ¿Necesitas asesoría personalizada?

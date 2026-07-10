@@ -1,8 +1,8 @@
 export const BRAND = {
-  BLUE: "#1B4D9E",
-  RED: "#E1382B",
-  GREEN: "#3FAE49",
-  GOLD: "#F2A900",
+  BLUE: "#1A8C8C",   // teal del círculo del logo
+  RED: "#D63031",    // rojo del pecho del loro
+  GREEN: "#3FAE49",  // verde del cuerpo del loro
+  GOLD: "#F2A900",   // dorado del pico/cabeza del loro
   BLACK: "#1A1A1A",
   WHITE: "#FFFFFF",
 } as const;

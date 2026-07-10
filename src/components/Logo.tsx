@@ -25,7 +25,7 @@ export default function Logo({ size = 48, showText = true }: LogoProps) {
         <div className="text-left">
           <div
             className="font-black text-sm leading-tight tracking-tight"
-            style={{ color: "#1B4D9E", fontFamily: "'Playfair Display', serif" }}
+            style={{ color: "#1A8C8C", fontFamily: "'Playfair Display', serif" }}
           >
             LOROTEXT SYM
           </div>

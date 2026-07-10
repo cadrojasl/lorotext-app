@@ -18,7 +18,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
   const { whatsapp_number, instagram_url, tiktok_url } = config;
 
   return (
-    <footer className="text-white pt-12 pb-6" style={{ backgroundColor: BRAND.BLUE }}>
+    <footer className="text-white pt-12 pb-6" style={{ backgroundColor: "#0D5C5C" }}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -29,7 +29,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
               </div>
               <span className="font-bold text-sm" style={{ fontFamily: "'Playfair Display', serif" }}>LOROTEXT SYM</span>
             </div>
-            <p className="text-sm text-blue-200 mb-5 leading-relaxed">
+            <p className="text-sm mb-5 leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
               El placer de tu hogar. Ropa de cama premium para noches de descanso incomparables.
             </p>
             <div className="flex gap-2.5">
@@ -47,18 +47,18 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
 
           {/* Categories */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4 text-blue-300">Categorías</h4>
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.GOLD }}>Categorías</h4>
             <ul className="space-y-2.5">
               {CATS.map((c) => (
-                <li key={c}><Link href="/catalogo" className="text-sm text-blue-200 hover:text-white transition-colors">{c}</Link></li>
+                <li key={c}><Link href="/catalogo" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.7)" }}>{c}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4 text-blue-300">Contacto</h4>
-            <ul className="space-y-2.5 text-sm text-blue-200">
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.GOLD }}>Contacto</h4>
+            <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
               <li className="flex items-center gap-2">
                 <MessageCircle size={13} />
                 <a href={`https://wa.me/${whatsapp_number}`} className="hover:text-white transition-colors">
@@ -69,14 +69,14 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
                 <IgIcon size={13} />
                 <a href={instagram_url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
               </li>
-              <li className="text-blue-300 text-xs mt-1">Lun – Sáb · 8 am – 6 pm</li>
+              <li className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>Lun – Sáb · 8 am – 6 pm</li>
             </ul>
           </div>
 
           {/* Info */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4 text-blue-300">Información</h4>
-            <ul className="space-y-2.5 text-sm text-blue-200">
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.GOLD }}>Información</h4>
+            <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
               {[
                 { label: "¿Cómo comprar?", href: "/info/como-comprar" },
                 { label: "Envíos y tiempos", href: "/info/envios" },
@@ -87,7 +87,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
           </div>
         </div>
 
-        <div className="border-t border-blue-800 pt-6 text-center text-xs text-blue-400">
+        <div className="pt-6 text-center text-xs" style={{ borderTop: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.4)" }}>
           © {new Date().getFullYear()} Lorotext SYM · El placer de tu hogar · Todos los derechos reservados
         </div>
       </div>

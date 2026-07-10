@@ -61,7 +61,7 @@ function SurveyForm() {
     <div className="min-h-screen flex items-center justify-center px-4 py-10" style={{ backgroundColor: "#F8F6F1" }}>
       <div className="bg-white rounded-3xl shadow-lg w-full max-w-md overflow-hidden">
         {/* Header */}
-        <div className="px-8 pt-8 pb-6 text-center" style={{ background: `linear-gradient(135deg, ${BRAND.BLUE} 0%, #0d2d6e 100%)` }}>
+        <div className="px-8 pt-8 pb-6 text-center" style={{ background: `linear-gradient(135deg, ${BRAND.BLUE} 0%, #0D5C5C 100%)` }}>
           <div className="w-16 h-16 rounded-full overflow-hidden bg-white mx-auto mb-4 shadow-md">
             <Image src="/logo.png" alt="Lorotext SYM" width={64} height={64} className="object-contain w-full h-full" />
           </div>

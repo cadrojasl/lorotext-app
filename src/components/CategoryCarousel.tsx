@@ -96,7 +96,7 @@ export default function CategoryCarousel({ categories, catImageMap }: Props) {
                   sizes="220px"
                 />
               ) : (
-                <div className="w-full h-full" style={{ background: `linear-gradient(160deg, ${BRAND.BLUE} 0%, #0d2d6e 100%)` }} />
+                <div className="w-full h-full" style={{ background: `linear-gradient(160deg, ${BRAND.BLUE} 0%, #0D5C5C 100%)` }} />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
