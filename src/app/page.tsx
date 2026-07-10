@@ -180,7 +180,7 @@ export default async function HomePage() {
           ].map(([n, label]) => (
             <div key={label as string}>
               <div className="font-black text-xl" style={{ color: BRAND.RED }}>{n}</div>
-              <div className="text-xs text-blue-300 mt-0.5">{label}</div>
+              <div className="text-xs mt-0.5" style={{ color: "rgba(255,200,198,0.85)" }}>{label}</div>
             </div>
           ))}
         </div>
