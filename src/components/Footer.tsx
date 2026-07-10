@@ -47,7 +47,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
 
           {/* Categories */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.RED }}>Categorías</h4>
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: "#E67E22" }}>Categorías</h4>
             <ul className="space-y-2.5">
               {CATS.map((c) => (
                 <li key={c}><Link href="/catalogo" className="text-sm hover:text-white transition-colors" style={{ color: "rgba(255,255,255,0.7)" }}>{c}</Link></li>
@@ -57,7 +57,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.RED }}>Contacto</h4>
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: "#E67E22" }}>Contacto</h4>
             <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
               <li className="flex items-center gap-2">
                 <MessageCircle size={13} />
@@ -75,7 +75,7 @@ export default function Footer({ config }: { config: SiteConfigValues }) {
 
           {/* Info */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: BRAND.RED }}>Información</h4>
+            <h4 className="font-semibold text-xs uppercase tracking-widest mb-4" style={{ color: "#E67E22" }}>Información</h4>
             <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
               {[
                 { label: "¿Cómo comprar?", href: "/info/como-comprar" },

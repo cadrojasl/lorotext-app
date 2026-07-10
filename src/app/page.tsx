@@ -179,7 +179,7 @@ export default async function HomePage() {
             ["24 h", "Respuesta WhatsApp"],
           ].map(([n, label]) => (
             <div key={label as string}>
-              <div className="font-black text-xl" style={{ color: BRAND.RED }}>{n}</div>
+              <div className="font-black text-xl" style={{ color: "#E67E22" }}>{n}</div>
               <div className="text-xs mt-0.5 text-white/80">{label}</div>
             </div>
           ))}
