@@ -93,7 +93,7 @@ export default async function HomePage() {
               <Link
                 href="/catalogo"
                 className="px-7 py-3.5 rounded-xl font-bold text-sm transition-all hover:brightness-110 shadow-lg"
-                style={{ backgroundColor: BRAND.GOLD, color: BRAND.BLACK }}
+                style={{ backgroundColor: BRAND.RED, color: BRAND.WHITE }}
               >
                 Ver catálogo
               </Link>
@@ -115,9 +115,9 @@ export default async function HomePage() {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `conic-gradient(${BRAND.GOLD} 0%, #FFC300 25%, ${BRAND.GOLD} 50%, #F2A900 75%, ${BRAND.GOLD} 100%)`,
+                background: `conic-gradient(${BRAND.RED} 0%, #E84040 25%, ${BRAND.RED} 50%, #C0392B 75%, ${BRAND.RED} 100%)`,
                 padding: 6,
-                boxShadow: `0 0 60px rgba(242,169,0,0.45), 0 0 120px rgba(242,169,0,0.2)`,
+                boxShadow: `0 0 60px rgba(214,48,49,0.45), 0 0 120px rgba(214,48,49,0.2)`,
               }}
             >
               {/* Anillo verde interior */}
@@ -157,7 +157,7 @@ export default async function HomePage() {
               className="absolute rounded-2xl px-3 py-1.5 text-white text-xs font-bold shadow-lg"
               style={{
                 backgroundColor: "#0A3D3D",
-                border: `1.5px solid ${BRAND.GOLD}`,
+                border: `1.5px solid ${BRAND.RED}`,
                 bottom: "10%",
                 right: "3%",
                 whiteSpace: "nowrap",
@@ -179,7 +179,7 @@ export default async function HomePage() {
             ["24 h", "Respuesta WhatsApp"],
           ].map(([n, label]) => (
             <div key={label as string}>
-              <div className="font-black text-xl" style={{ color: BRAND.GOLD }}>{n}</div>
+              <div className="font-black text-xl" style={{ color: BRAND.RED }}>{n}</div>
               <div className="text-xs text-blue-300 mt-0.5">{label}</div>
             </div>
           ))}
