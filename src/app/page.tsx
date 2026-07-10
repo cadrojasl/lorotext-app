@@ -115,18 +115,18 @@ export default async function HomePage() {
               style={{
                 width: "100%",
                 height: "100%",
-                background: `conic-gradient(${BRAND.RED} 0%, #E84040 25%, ${BRAND.RED} 50%, #C0392B 75%, ${BRAND.RED} 100%)`,
+                background: `conic-gradient(#E67E22 0%, #F39C12 25%, #E67E22 50%, #D35400 75%, #E67E22 100%)`,
                 padding: 6,
-                boxShadow: `0 0 60px rgba(214,48,49,0.45), 0 0 120px rgba(214,48,49,0.2)`,
+                boxShadow: `0 0 60px rgba(230,126,34,0.5), 0 0 120px rgba(230,126,34,0.2)`,
               }}
             >
-              {/* Anillo verde interior */}
+              {/* Anillo dorado interior */}
               <div
                 className="rounded-full flex items-center justify-center"
                 style={{
                   width: "100%",
                   height: "100%",
-                  background: BRAND.GREEN,
+                  background: "#F2C94C",
                   padding: 5,
                 }}
               >
@@ -180,7 +180,7 @@ export default async function HomePage() {
           ].map(([n, label]) => (
             <div key={label as string}>
               <div className="font-black text-xl" style={{ color: BRAND.RED }}>{n}</div>
-              <div className="text-xs mt-0.5" style={{ color: "rgba(255,200,198,0.85)" }}>{label}</div>
+              <div className="text-xs mt-0.5 text-white/80">{label}</div>
             </div>
           ))}
         </div>
